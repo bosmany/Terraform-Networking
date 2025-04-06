@@ -1,7 +1,7 @@
 # backend.tf
 terraform {
   backend "s3" {
-    bucket         = "your-terraform-state-bucket"
+    bucket         = "state-bucket-bilal"
     key            = "network/terraform.tfstate"
     region         = var.aws_region
     dynamodb_table = "terraform-lock-table"
