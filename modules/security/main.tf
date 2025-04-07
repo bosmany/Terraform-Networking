@@ -1,5 +1,5 @@
 resource "aws_security_group" "web" {
-  name        = "${var.project_name}-web-sg"
+  name        = "Bilal Project-web-sg"
   description = "Allow HTTP/HTTPS traffic"
   vpc_id      = var.vpc_id
 
