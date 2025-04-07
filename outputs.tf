@@ -11,7 +11,7 @@ output "public_subnets" {
 
 output "security_group_id" {
   description = "The ID of the created security group"
-  value       = module.security.sg_id
+  value       = module.security.security_group_id  # Correct reference
 }
 
 output "ec2_instance_public_ip" {
