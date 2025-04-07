@@ -1,16 +1,16 @@
 # backend.tf
 terraform {
   backend "s3" {
-    bucket         = "state-bucket-bilal"
+    bucket         = "new-state-bucket-102"
     key            = "network/terraform.tfstate"
-    region         = var.aws_region
+    region         = "us-east-1"
     dynamodb_table = "terraform-lock-table"
     encrypt        = true
   }
 }
 
 resource "aws_dynamodb_table" "state_lock" {
-  name         = "terraform-lock-table"
+  name         = "new-terraform-lock-table"
   billing_mode = "PAY_PER_REQUEST"
   hash_key     = "LockID"
 
